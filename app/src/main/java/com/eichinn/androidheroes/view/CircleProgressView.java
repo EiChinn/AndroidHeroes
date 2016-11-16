@@ -22,7 +22,7 @@ import com.eichinn.utilities.view.DrawTextUtils;
 public class CircleProgressView extends View {
     public CircleProgressView(Context context) {
         super(context);
-        init(null, null, 0);
+        init(context, null, 0);
     }
 
     public CircleProgressView(Context context, AttributeSet attrs) {
@@ -106,7 +106,6 @@ public class CircleProgressView extends View {
     private int arcWidth;
     private int arcAngle;
 
-
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -122,8 +121,8 @@ public class CircleProgressView extends View {
         height = height - paddingTop - paddingBottom;
 
         //画实心圆
-        circleX = width / 2;
-        circleY = height / 2;
+        circleX = width / 2 + paddingLeft;
+        circleY = height / 2 + paddingTop;
         radius = Math.min(width / 4, height / 4);
         canvas.drawCircle(circleX, circleY, radius, circlePaint);
 
@@ -138,8 +137,6 @@ public class CircleProgressView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
         setMeasuredDimension(measureWidth(widthMeasureSpec), measureHeight(heightMeasureSpec));
     }
 

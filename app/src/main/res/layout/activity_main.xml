@@ -8,11 +8,16 @@
     tools:context="com.eichinn.androidheroes.MainActivity">
 
     <com.eichinn.androidheroes.view.CircleProgressView
-        android:id="@+id/cpv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ff00ff"
-        android:padding="50px"
+        android:id="@+id/vv"
+        android:layout_width="800px"
+        android:layout_height="800px"
+        android:background="#ff0000"
         CircleProgressView:arcAngle="90"
         />
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Change"-->
+        <!--android:onClick="onClick"/>-->
 </RelativeLayout>

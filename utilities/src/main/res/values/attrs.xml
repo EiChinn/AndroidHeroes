@@ -11,4 +11,12 @@
         <attr name="arcWidth" format="dimension" />
         <attr name="arcAngle" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="VolumeView">
+        <attr name="rectCount" format="integer" />
+        <attr name="rectOffset" format="integer" />
+        <attr name="rectColorStart" format="color" />
+        <attr name="rectColorEnd" format="color" />
+
+    </declare-styleable>
 </resources>
