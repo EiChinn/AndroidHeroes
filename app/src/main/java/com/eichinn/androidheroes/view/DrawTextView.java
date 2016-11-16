@@ -34,7 +34,7 @@ public class DrawTextView extends View{
     }
 
     private TextPaint textPaint;
-    private String text = "abg12一二";
+    private String text = "y";
     private Rect minRect;
     private int textWidth;
     private int textHeight;
@@ -48,6 +48,7 @@ public class DrawTextView extends View{
         textPaint.setTextSize(200);
         textPaint.setTypeface(Typeface.DEFAULT);
         textPaint.setColor(Color.RED);
+        textPaint.setTextAlign(Paint.Align.LEFT);
         minRect = new Rect();
         textPaint.getTextBounds(text, 0, text.length(), minRect);
         textWidth = minRect.width();
